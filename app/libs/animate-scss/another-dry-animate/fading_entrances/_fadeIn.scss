@@ -1,0 +1,14 @@
+@mixin fadeIn($name: fadeIn, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+}

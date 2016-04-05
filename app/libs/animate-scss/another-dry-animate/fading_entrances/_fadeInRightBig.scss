@@ -1,0 +1,16 @@
+@mixin fadeInRightBig($name: fadeInRightBig, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes fadeInRightBig {
+        0% {
+          opacity: 0;
+          transform: translate3d(2000px, 0, 0);
+        }
+
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    }
+}

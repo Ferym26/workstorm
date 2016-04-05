@@ -1,0 +1,36 @@
+@import "bourbon"
+@import "app/libs/animate-scss/another-dry-animate"
+
+// Your animations hear
+// @include %animation name%(длительность, задержка, кол-во повторений)
+
+
+//	bounce 				bounceIn 					fadeIn 						fadeOut 					rotateIn
+//	flash	  			bounceInDown 			fadeInDown 				fadeOutDown 			rotateInDownLeft
+//	pulse 				bounceInLeft 			fadeInDownBig 		fadeOutDownBig 		rotateInDownRight
+//	rubberBand 		bounceInRight 		fadeInLeft 				fadeOutLeft 			rotateInUpLeft
+//	shake   			bounceInUp 				fadeInLeftBig 		fadeOutLeftBig 		rotateInUpRight
+//	          		bounceOut 				fadeInRight 			fadeOutRight 			rotateOut
+//	swing 				bounceOutDown 		fadeInRightBig 		fadeOutRightBig 	rotateOutDownLeft
+//	tada  				bounceOutLeft 		fadeInUp 					fadeOutUp 				rotateOutDownRight
+//	wobble 				bounceOutRight 		fadeInUpBig 			fadeOutUpBig 			rotateOutUpLeft
+//	jello 				bounceOutUp 																					rotateOutUpRight
+//	
+//	
+//	flipInX 					zoomIn 					slideInDown
+//	flipInY 					zoomInDown 			slideInLeft
+//	flipOutX 					zoomInLeft 			slideInRight
+//	flipOutY 					zoomInRight 		slideInUp
+// 	lightSpeedIn: 		zoomInUp 				slideOutDown
+//	lightSpeedOut			zoomOut 				slideOutLeft
+//	hinge 						zoomOutDown 		slideOutRight
+//	rollIn						zoomOutLeft 		slideOutUp
+//	rollOut 					zoomOutRight 		
+//										zoomOutUp 			
+			
+
+
+.anim1
+	@include bounceInLeft($duration: 1s, $delay: 0s, $iterations: 1)
+	opacity: 1 !important
+	transition: opacity 1s ease

@@ -1,0 +1,15 @@
+@mixin slideOutDown($name: slideOutDown, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes slideOutDown {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+          visibility: hidden;
+          transform: translate3d(0, 100%, 0);
+        }
+      }
+    }
+}

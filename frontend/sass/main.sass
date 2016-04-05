@@ -1,0 +1,52 @@
+@import "bourbon"
+@import "_variables"
+@import "_mixins"
+
+ 
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+
+/* User Styles */
+h1
+	color: green
+	font-size: 50px
+
+//ANOTHER PAGES
+@import "frontend/sass/pages/_page1"
+
+
+
+//ALWAYS END
+@import "_animations"
+@import "_media"
+
+
+//Load libs sass
+//@import "app/libs/font-awesome/scss/font-awesome"
+
+
+
+

@@ -1,0 +1,15 @@
+@mixin fadeOutDown($name: fadeOutDown, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes fadeOutDown {
+        0% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+          transform: translate3d(0, 100%, 0);
+        }
+      }
+    }
+}

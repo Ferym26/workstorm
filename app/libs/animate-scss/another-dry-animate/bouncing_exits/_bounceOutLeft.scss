@@ -1,0 +1,16 @@
+@mixin bounceOutLeft($name: bounceOutLeft, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes bounceOutLeft {
+        20% {
+          opacity: 1;
+          transform: translate3d(20px, 0, 0);
+        }
+
+        100% {
+          opacity: 0;
+          transform: translate3d(-2000px, 0, 0);
+        }
+      }
+    }
+}

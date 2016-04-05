@@ -1,0 +1,19 @@
+@mixin zoomOut($name: zoomOut, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes zoomOut {
+        0% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+          transform: scale3d(.3, .3, .3);
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+}

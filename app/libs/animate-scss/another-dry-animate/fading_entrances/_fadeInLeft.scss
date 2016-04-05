@@ -1,0 +1,16 @@
+@mixin fadeInLeft($name: fadeInLeft, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes fadeInLeft {
+        0% {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0);
+        }
+
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    }
+}

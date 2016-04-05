@@ -1,0 +1,18 @@
+@mixin rotateInDownRight($name: rotateInDownRight, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes rotateInDownRight {
+        0% {
+          transform-origin: right bottom;
+          transform: rotate3d(0, 0, 1, 45deg);
+          opacity: 0;
+        }
+
+        100% {
+          transform-origin: right bottom;
+          transform: none;
+          opacity: 1;
+        }
+      }
+    }
+}

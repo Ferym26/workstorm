@@ -1,0 +1,20 @@
+@mixin bounceOut($name: bounceOut, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes bounceOut {
+        20% {
+          transform: scale3d(.9, .9, .9);
+        }
+
+        50%, 55% {
+          opacity: 1;
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        100% {
+          opacity: 0;
+          transform: scale3d(.3, .3, .3);
+        }
+      }
+    }
+}

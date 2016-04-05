@@ -1,0 +1,5 @@
+
+@mixin an-props($name, $duration, $delay, $iterations) {
+    animation: $name $duration $delay $iterations;
+    animation-fill-mode: both;
+}

@@ -1,0 +1,17 @@
+@mixin rotateOut($name: rotateOut, $duration: $an-duration, $delay: $an-delay, $iterations: $an-iterations) {
+	@include an-props($name, $duration, $delay, $iterations);
+    @at-root {
+      @keyframes rotateOut {
+        0% {
+          transform-origin: center;
+          opacity: 1;
+        }
+
+        100% {
+          transform-origin: center;
+          transform: rotate3d(0, 0, 1, 200deg);
+          opacity: 0;
+        }
+      }
+    }
+}
