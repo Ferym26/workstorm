@@ -52,7 +52,7 @@ var gulp         = require('gulp'),
 
 
 
-gulp.task('serve', ['styles', 'scripts'], function() {
+gulp.task('serve', ['styles', 'scripts', 'pug'], function() {
 		browserSync.init({
 				server: {
 						baseDir: "./app"
@@ -78,13 +78,13 @@ gulp.task('styles', function () {
 });
 
 
-//gulp.task('pug', function build() {
-//  return gulp.src('frontend/pug/**/*.pug')
-//  	.pipe(debug({title: 'src'}))
-//    .pipe(pug({pretty: true, filename: 'workstorm.local/'}))
-//    .pipe(debug({title: 'pug'}))
-//    .pipe(gulp.dest('app'));
-//});
+gulp.task('pug', function build() {
+  return gulp.src('frontend/pug/**/*.pug')
+  	.pipe(debug({title: 'src'}))
+    .pipe(pug({pretty: true, filename: 'workstorm.local/'}))
+    .pipe(debug({title: 'pug'}))
+    .pipe(gulp.dest('app'));
+});
 
 
 
@@ -123,7 +123,7 @@ gulp.task('imgmin', () => {
 
 gulp.task('watch', function () {
 	gulp.watch('frontend/sass/**/*.sass', ['styles']);
-	//gulp.watch('frontend/pug/**/*.pug', ['pug']);
+	gulp.watch('frontend/pug/**/*.pug', ['pug']);
 	gulp.watch('app/libs/**/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
