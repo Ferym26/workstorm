@@ -65,7 +65,7 @@ gulp.task('styles', function () {
 
 
 gulp.task('pug', function build() {
-	gulp.src('frontend/pug/**/*.pug')
+	gulp.src('frontend/pug/*.pug')
 		.pipe(plumber())
 		.pipe(pug({pretty: true, basedir: __dirname + '/frontend/pug'}))
 		.pipe(gulp.dest('app'))
