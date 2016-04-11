@@ -1,3 +1,25 @@
+//vertical center
+=vcenter
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+//horizontal center
+=wcenter
+	position: absolute	
+	left: 50%
+	transform: translate(-50%, 0)
+
+//horizontal center
+=hcenter
+	position: absolute	
+	top: 50%
+	transform: translate(0, -50%)
+
+
+
+
 //centered item. outer>innet. $ta - text-align: ...
 =outer($height, $ta)
 	height: $height
@@ -12,14 +34,6 @@
 	vertical-align: middle
 
 
-
-
-//vertical center
-=vcenter
-	position: absolute
-	top: 50%
-	left: 50%
-	transform: translate(-50%, -50%)
 
 //triangle
 =arr($width, $height, $bg, $direction)
@@ -51,6 +65,9 @@
 		border-width: $height + px 0 0 $width + px
 		border-color: transparent transparent transparent $bg
 
+
+
+
 //links styles
 =links($link, $hover, $active)
 	a
@@ -70,11 +87,15 @@
 	text-overflow: ellipsis
 	white-space: nowrap
 
+
+
 //Позиционирование картинки фона по макс размерам блока
 =cover
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: 50% 50%
+
+
 
 //Расставляет равномерно по ширине все дочерние элементы. Применяется к родителю.
 //Дочерним добаить свойства dib и w
@@ -92,6 +113,8 @@
 		height: 0px
 		visibility: hidden
 		overflow: hidden
+
+
 
 //Выравнивает дочерний вертикально по центру родительского
 //Дочерним добавить свойство dib и vam

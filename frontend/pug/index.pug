@@ -1,7 +1,56 @@
-extend frontend/pug/includes/layout.pug
+extend /includes/layout.pug
 
 block content
 	// USER CONTENT
-	h1 WWWHHYYYYYYYYYYYYYY????
-	p bobobob
+
+	h1 h1 - Lorem ipsum dolor sit amet, consectetur.
+	h2 h2 - Lorem ipsum dolor sit amet, consectetur.
+	h3 h3 - Lorem ipsum dolor sit amet, consectetur.
+	h4 h4 - Lorem ipsum dolor sit amet, consectetur.
+	h5 h5 - Lorem ipsum dolor sit amet, consectetur.
+	h6 h6 - Lorem ipsum dolor sit amet, consectetur.
+
+	p p - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit, nemo laudantium corrupti enim illum, animi, sit voluptatem harum quia nam tempore esse deserunt sed inventore dolor fugit repellendus adipisci.
+	b b - Lorem ipsum dolor sit amet, consectetur.
+	br
+	strong  strong - Lorem ipsum dolor sit amet, consectetur.
+	ul
+		li li - Lorem ipsum dolor sit amet.
+		li li - Lorem ipsum dolor sit amet.
+	a(href='#') Some LINK
+	br
+	i.fa.fa-thumbs-o-up
+
+	form#form1
+		// Hidden Required Fields
+		input(type='hidden', name='project_name', value='Site Name')
+		input(type='hidden', name='admin_email', value='ferym_forever@list.ru')
+		input(type='hidden', name='form_subject', value='Form Subject')
+		// END Hidden Required Fields
+		input(type='text', name='Name', placeholder='You name...', required='')
+		br
+		input(type='text', name='E-mail', placeholder='You E-mail...', required='')
+		br
+		input(type='text', name='Phone', placeholder='You phone...')
+		br
+		button Send
+
+	br
+
+	a.open_modal(href="#modal1") Открыть модальное окно
+
+	br
+	//Modal window
+	.modal_win#modal1
+		span.modal_close
+			i.fa.fa-times
+		.modal1
+			p Сожержание модальноо окна
+
+	#overlay
+	
+	
+
+
+
 	// END USER CONTENT

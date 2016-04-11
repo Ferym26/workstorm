@@ -36,7 +36,9 @@ html.no-js(lang='ru')
 	script.
 		loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );
 	script.
-		loadCSS( "libs/owl-carousel-2/assets/owl.carousel.css", false, "all" );
+		loadCSS( "libs/owl.carousel/dist/assets/owl.carousel.min.css", false, "all" );
+	script.
+		loadCSS( "libs/font-awesome/css/font-awesome.min.css", false, "all" );
 	// Load CSS End
 	
 	// Load CSS Compilled without JS
@@ -50,17 +52,15 @@ html.no-js(lang='ru')
 
 		block content
 
-		//include \footer.pug
+		include /includes/footer.pug
 
 		.hidden
 
-
-
 		//if lt IE 9
-			script(src='libs/html5shiv/es5-shim.min.js')
-			script(src='libs/html5shiv/html5shiv.min.js')
-			script(src='libs/html5shiv/html5shiv-printshiv.min.js')
-			script(src='libs/respond/respond.min.js')
+			script(src='libs/es5-shim/es5-shim.min.js')
+			script(src='libs/html5shiv/dist/html5shiv.min.js')
+			script(src='libs/html5shiv/dist/html5shiv-printshiv.min.js')
+			script(src='libs/respond/dest/respond.min.js')
 				
 		// Load Scripts Start
 		script.

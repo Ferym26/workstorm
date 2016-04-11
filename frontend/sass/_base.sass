@@ -1,14 +1,29 @@
 html
-	font-size: 16px /* % for rem */
+	font-size: 100% /* % for rem; USE rem only for titles and huge texts*/
+
+
+	//	10px	62.50%
+	//	11px	68.75%
+	//	12px	75.00%
+	//	13px	81.25%
+	//	14px	87.50%
+	//	15px	93.75%
+	//	
+	//	16px	100.0%
+	//	17px	106.25%
+	//	18px	112.50%
+	//	19px	118.75%
+	//	20px	125.00%
+
 
 body	
 	min-width: 320px
 	position: relative
-	font-size: 16px
+	font-size: 100%
 	line-height: 1.6
 	font-family: "RobotoRegular", sans-serif
 	overflow-x: hidden
-	color: $primary-text-color
+	color: #000
 
 .hidden
 	display: none
@@ -18,7 +33,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li
 	margin: 0
 
 h1
-	font-size: rem(42px)
+	font-size: rem(50px)	
 h2
 	font-size: rem(30px)
 h3
@@ -49,34 +64,12 @@ section
 		text-align: center
 		margin-bottom: 35px
 
-.btn
-	display: inline-block
-	height: auto
-	padding: 10px 40px
-	text-transform: uppercase
-	color: #fff
-	border-radius: 4px
-	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-	&-accent
-		background: $accent-color
-		border: 2px solid $trp
-		&:hover
-			background: $trp
-			border: 2px solid $accent-color
-			color: #000
-	&-prim
-		background: $primary-color-dark
-		border: 2px solid $trp
-		&:hover
-			background: $trp
-			border: 2px solid $primary-color-dark
-			color: #000	
 
 
 //Стили модальных окон
 $btn-close-size: 35px
 
-.modal_div
+.modal_win
 	display: none
 	position: fixed
 	top: 45%
@@ -85,8 +78,7 @@ $btn-close-size: 35px
 	width: 75vw	
 	background: #fff
 	padding: 40px 35px 50px
-	transform: translate(-50%, -50%)
-	border-top-right-radius: $btn-close-size / 2
+	transform: translate(-50%, -50%)	
 	z-index: 20
 
 	.modal1
@@ -94,31 +86,27 @@ $btn-close-size: 35px
 	
 	.modal_close
 		display: block
-		+size($btn-close-size)
-		border-radius: 50%
+		+size($btn-close-size)		
 		position: absolute
 		top: 0px
 		right: 0px		
-		background: $primary-color
+		background: red
 		text-align: center
 		line-height: $btn-close-size
 		font-size: 25px
 		color: #fff
 		cursor: pointer
-		transition: transform 1s ease
-		&:hover
-			transform: rotate(90deg)
+
 
 //подложка
 #overlay
 	display: none
-	width: 100%
-	height: 100%
+	+size(100%)
 	position: fixed
 	top: 0
 	left: 0
 	background-color: #000
 	opacity: 0.8
 	cursor: pointer
-	z-index: 3
+	z-index: 10
 	

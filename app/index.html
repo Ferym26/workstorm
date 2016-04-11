@@ -29,7 +29,8 @@
   <script>loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );</script>
   <script>loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );</script>
   <script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
-  <script>loadCSS( "libs/owl-carousel-2/assets/owl.carousel.css", false, "all" );</script>
+  <script>loadCSS( "libs/owl.carousel/dist/assets/owl.carousel.min.css", false, "all" );</script>
+  <script>loadCSS( "libs/font-awesome/css/font-awesome.min.css", false, "all" );</script>
   <!-- Load CSS End-->
   <!-- Load CSS Compilled without JS-->
   <noscript>
@@ -39,19 +40,47 @@
   <body>
     <!-- HEADER-->
     <p>header</p>
-    <p>toooooo</p>
     <!--End HEADER-->
     <!-- USER CONTENT-->
-    <h1>PIZDARO</h1>
-    <p>bobobob</p>
+    <h1>h1 - Lorem ipsum dolor sit amet, consectetur.</h1>
+    <h2>h2 - Lorem ipsum dolor sit amet, consectetur.</h2>
+    <h3>h3 - Lorem ipsum dolor sit amet, consectetur.</h3>
+    <h4>h4 - Lorem ipsum dolor sit amet, consectetur.</h4>
+    <h5>h5 - Lorem ipsum dolor sit amet, consectetur.</h5>
+    <h6>h6 - Lorem ipsum dolor sit amet, consectetur.</h6>
+    <p>p - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit, nemo laudantium corrupti enim illum, animi, sit voluptatem harum quia nam tempore esse deserunt sed inventore dolor fugit repellendus adipisci.</p><b>b - Lorem ipsum dolor sit amet, consectetur.</b><br><strong> strong - Lorem ipsum dolor sit amet, consectetur.</strong>
+    <ul>
+      <li>li - Lorem ipsum dolor sit amet.</li>
+      <li>li - Lorem ipsum dolor sit amet.</li>
+    </ul><a href="#">Some LINK</a><br><i class="fa fa-thumbs-o-up"></i>
+    <form id="form1">
+      <!-- Hidden Required Fields-->
+      <input type="hidden" name="project_name" value="Site Name">
+      <input type="hidden" name="admin_email" value="ferym_forever@list.ru">
+      <input type="hidden" name="form_subject" value="Form Subject">
+      <!-- END Hidden Required Fields-->
+      <input type="text" name="Name" placeholder="You name..." required=""><br>
+      <input type="text" name="E-mail" placeholder="You E-mail..." required=""><br>
+      <input type="text" name="Phone" placeholder="You phone..."><br>
+      <button>Send</button>
+    </form><br><a class="open_modal" href="#modal1">Открыть модальное окно</a><br>
+    <!--Modal window-->
+    <div class="modal_win" id="modal1"><span class="modal_close"><i class="fa fa-times"></i></span>
+      <div class="modal1">
+        <p>Сожержание модальноо окна</p>
+      </div>
+    </div>
+    <div id="overlay"></div>
     <!-- END USER CONTENT-->
-    <!--include \footer.pug-->
+    <!--FOOTER-->
+    <p>footer</p>
+    <!-- End FOOTER-->
     <div class="hidden"></div>
     <!--if lt IE 9
-    script(src='libs/html5shiv/es5-shim.min.js')
-    script(src='libs/html5shiv/html5shiv.min.js')
-    script(src='libs/html5shiv/html5shiv-printshiv.min.js')
-    script(src='libs/respond/respond.min.js')
+    script(src='libs/es5-shim/es5-shim.min.js')
+    script(src='libs/html5shiv/dist/html5shiv.min.js')
+    script(src='libs/html5shiv/dist/html5shiv-printshiv.min.js')
+    script(src='libs/respond/dest/respond.min.js')
     	
     -->
     <!-- Load Scripts Start-->

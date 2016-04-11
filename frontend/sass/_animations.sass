@@ -1,5 +1,5 @@
 @import "bourbon"
-@import "app/libs/animate-scss/another-dry-animate"
+@import "app/libs/another-dry-animate/scss/_another-dry-animate.scss"
 
 // Your animations hear
 // @include %animation name%(длительность, задержка, кол-во повторений)
@@ -30,7 +30,7 @@
 			
 
 
-.anim1
-	@include bounceInLeft($duration: 1s, $delay: 0s, $iterations: 1)
+.anim-title3
+	@include zoomIn($duration: 2s, $delay: 0s, $iterations: 1)
 	opacity: 1 !important
 	transition: opacity 1s ease

@@ -1,0 +1,29 @@
+{
+  "name": "webstorm.local",
+  "description": "gulp + sass + pug",
+  "main": "gulpfile.js",
+  "authors": [
+    "ferym26"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Ferym26/workstorm",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.5.0",
+    "modernizer": "^2.8.2",
+    "waypoints": "^4.0.0",
+    "owl.carousel": "owl-carousel2#^2.0.0-beta.3",
+    "respond": "^1.4.2",
+    "html5shiv": "^3.7.3",
+    "es5-shim": "^4.5.8",
+    "jquery": "^2.2.3",
+    "another-dry-animate": "*"
+  }
+}

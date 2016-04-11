@@ -1,0 +1,21 @@
+{
+  "name": "another-dry-animate",
+  "homepage": "https://github.com/rosivanov/another-dry-animate",
+  "authors": [
+    "rosivanov <ros.g6w@gmail.com>"
+  ],
+  "description": "another-dry-animate",
+  "main": "scss/_another-dry-animate.scss",
+  "moduleType": [],
+  "keywords": [
+    "Animate.css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
