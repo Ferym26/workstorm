@@ -1,6 +1,6 @@
 html
 	font-size: 100% /* % for rem; USE rem only for titles and huge texts*/
-
+	overflow-x: hidden
 
 	//	10px	62.50%
 	//	11px	68.75%
@@ -8,15 +8,15 @@ html
 	//	13px	81.25%
 	//	14px	87.50%
 	//	15px	93.75%
-	//	
+	//
 	//	16px	100.0%
 	//	17px	106.25%
 	//	18px	112.50%
 	//	19px	118.75%
 	//	20px	125.00%
+	// TODO: sfjghskdjfglksdjgh
 
-
-body	
+body
 	min-width: 320px
 	position: relative
 	font-size: 100%
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li
 	margin: 0
 
 h1
-	font-size: rem(50px)	
+	font-size: rem(50px)
 h2
 	font-size: rem(30px)
 h3
@@ -75,21 +75,21 @@ $btn-close-size: 35px
 	top: 45%
 	left: 50%
 	opacity: 0
-	width: 75vw	
+	width: 75vw
 	background: #fff
 	padding: 40px 35px 50px
-	transform: translate(-50%, -50%)	
+	transform: translate(-50%, -50%)
 	z-index: 20
 
 	.modal1
 		position: relative
-	
+
 	.modal_close
 		display: block
-		+size($btn-close-size)		
+		+size($btn-close-size)
 		position: absolute
 		top: 0px
-		right: 0px		
+		right: 0px
 		background: red
 		text-align: center
 		line-height: $btn-close-size
@@ -109,4 +109,3 @@ $btn-close-size: 35px
 	opacity: 0.8
 	cursor: pointer
 	z-index: 10
-	

@@ -25,7 +25,7 @@ $(document).ready(function() {
 	}, {
 	  offset: '75%'
 	});
-
+	
 
 	//Переход по якорям
 	/**/
@@ -59,7 +59,7 @@ $(document).ready(function() {
 		overlay.fadeIn(400,
 			function(){
 				$(div)
-					.css('display', 'block') 
+					.css('display', 'block')
 					.animate({opacity: 1, top: '50%'}, 200);
 			});
 	});

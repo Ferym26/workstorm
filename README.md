@@ -1,4 +1,4 @@
-# Workstorm template 1.0
+# Workstorm template 1.1
 
 Description
 
