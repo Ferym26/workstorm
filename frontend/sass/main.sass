@@ -1,51 +1,16 @@
 @import "bourbon"
-@import "_variables"
-@import "_mixins"
+
+//bower_components styles
+@import "bower_components/bootstrap/scss/bootstrap.scss"
+@import "bower_components/font-awesome/scss/font-awesome.scss"
 
 
-
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
-
-*:-moz-placeholder
-	color: #666
-	opacity: 1
-
-*::-moz-placeholder
-	color: #666
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #666
-	opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
-
-
-
-/*=============== section  ===============*/
-
-.some
-	background: #000
-
-/*=============== END section  ===============*/
-
-
-
-
-
-
-
+//PROGECT THEME
+@import "_theme"
 
 
 //ANOTHER PAGES
-@import "frontend/sass/pages/_page1"  
+@import "pages/_page1"
 
 
 //ALWAYS END

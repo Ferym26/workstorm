@@ -4,5 +4,8 @@ tmp
 .DS_Store
 .idea
 /node_modules
+/bower_components
 /backup
 specs/*
+app/js/bower_components.js
+app/js/vendors.js

@@ -1,0 +1,37 @@
+SASS
+/*=================================
+							page NAME
+	=================================*/
+.class
+	property: value
+
+/*=================================
+					END	page NAME
+	=================================*/
+
+
+/*~~~~~~~~~~~~~~~ section CONTENT ~~~~~~~~~~~~~~~*/
+.class
+	property: value
+
+/*~~~~~~~~~~~~~~~ END section CONTENT ~~~~~~~~~~~~~~~*/
+
+
+
+HTML
+<!--~~~~~~~~~~~~~~~ section CONTENT ~~~~~~~~~~~~~~~-->
+<div></div>
+<!--~~~~~~~~~~~~~~~ END section CONTENT ~~~~~~~~~~~~~~~-->
+
+
+<!--END Container-->
+
+
+
+PUG
+//~~~~~~~~~~~~~~~ section CONTENT ~~~~~~~~~~~~~~~
+.class
+//~~~~~~~~~~~~~~~ END section CONTENT ~~~~~~~~~~~~~~~
+
+
+//End container
