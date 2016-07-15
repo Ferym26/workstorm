@@ -77,7 +77,7 @@ gulp.task('pug', function build() {
 
 
 gulp.task('imgmin', function () {
-		return gulp.src('frontend/img/*.{png,jpg,svg}')
+		return gulp.src('frontend/img/*.{png,jpg,jpeg,svg}')
 				.pipe(newer('app/img/'))
 				.pipe(imagemin({
 						progressive: true,
@@ -121,7 +121,7 @@ gulp.task('watch', function () {
 
 		gulp.watch('app/js/*.js').on("change", browserSync.reload);
 		gulp.watch('app/*.html').on('change', browserSync.reload);
-		gulp.watch('frontend/img/*.{png,jpg,svg}', ['imgmin']);
+		gulp.watch('frontend/img/*.{png,jpg,jpeg,svg}', ['imgmin']);
 });
 
 
