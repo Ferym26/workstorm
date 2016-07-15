@@ -47,7 +47,7 @@ gulp.task('serve', ['styles', 'vendors', 'pug'], function() {
 
 
 gulp.task('styles', function () {
-		gulp.src('frontend/sass/*.sass')
+		gulp.src('frontend/sass/*.{scss,sass}')
 				//.pipe(sourcemaps.init())
 				.pipe(sass({includePaths: require('node-bourbon').includePaths}))
 				.on('error', notify.onError({
@@ -77,7 +77,7 @@ gulp.task('pug', function build() {
 
 
 gulp.task('imgmin', function () {
-		return gulp.src('frontend/img/*')
+		return gulp.src('frontend/img/*.{png,jpg,svg}')
 				.pipe(newer('app/img/'))
 				.pipe(imagemin({
 						progressive: true,
@@ -113,7 +113,7 @@ gulp.task('vendors', ['bower'], function () {
 
 
 gulp.task('watch', function () {
-		gulp.watch('frontend/sass/**/*.sass', ['styles']);
+		gulp.watch('frontend/sass/**/*.{scss,sass}', ['styles']);
 		gulp.watch('frontend/pug/**/*.pug', ['pug']);
 
 		gulp.watch('app/libs/**/*.js', ['vendors']);
@@ -121,7 +121,7 @@ gulp.task('watch', function () {
 
 		gulp.watch('app/js/*.js').on("change", browserSync.reload);
 		gulp.watch('app/*.html').on('change', browserSync.reload);
-		gulp.watch('frontend/img/*', ['imgmin']);
+		gulp.watch('frontend/img/*.{png,jpg,svg}', ['imgmin']);
 });
 
 
