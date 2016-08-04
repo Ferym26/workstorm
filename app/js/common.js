@@ -1,30 +1,24 @@
 $(document).ready(function() {
 
-	//Animate CSS + WayPoints javaScript Plugin
-	//Example: $(".element").animated("zoomInUp");
-	//Author URL: http://webdesign-master.ru
-	// (function($) {
-	// 	$.fn.animated = function(inEffect) {
-	// 		$(this).each(function() {
-	// 			var ths = $(this);
-	// 			ths.css("opacity", "0").addClass("animated").waypoint(function(dir) {
-	// 				if (dir === "down") {
-	// 					ths.addClass(inEffect).css("opacity", "1");
-	// 				};
-	// 			}, {
-	// 				offset: "90%"
-	// 			});
+	//Animate.scss + WayPoints JS plugin with settings in sass	
+	(function($) {
+		$.fn.animated = function(animName) {
+			$(this).each(function() {
+				var ths = $(this);			
+				$(this).css("opacity", "0").addClass("animated").waypoint(function(dir) {
+					ths.addClass(animName);
+				}, {
+				 offset: '80%'
+				});
 
-	// 		});
-	// 	};
-	// })(jQuery);
+			});	 		
+		};
+	})(jQuery);
 
-	//var element = $(".elementClass");
-	//var waypoints =  element.css("opacity", "0").waypoint(function(direction) {
-	//	element.addClass("animated anim-title3");
-	//}, {
-	//  offset: '75%'
-	//});
+	//Init animation
+	// .item - target item
+	// animation-name - class from _animation.sass
+	$(".item").animated("animation-name");
 	
 
 	//Переход по якорям
@@ -38,18 +32,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-	//Запуск анимаций
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('anim1'),
-	// 	handler: function(direction) {
-	// 		$("#anim1").addClass("anim1");
-	// 	},
-	// 	offset: "80%"
-	// })
-
-
-
-
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
@@ -58,12 +40,14 @@ $(document).ready(function() {
 		return true;
 	}));
 
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
 			return $(this).attr("src").replace(".svg", ".png");
 		});
 	};
+
 
 	//E-mail Ajax Send
 	$("#form1").submit(function() { //Change
@@ -82,6 +66,7 @@ $(document).ready(function() {
 		return false;
 	});
 
+
 	//Chrome Smooth Scroll
 	try {
 		$.browserSelector();
@@ -91,7 +76,6 @@ $(document).ready(function() {
 	} catch(err) {
 
 	};
-
 
 
 });
