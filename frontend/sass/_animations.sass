@@ -25,11 +25,12 @@
 //										zoomOutUp 			
 
 //For multiple items
-$item-number:			4
+$item-number:				4
+$delay-timer:				0.2s
 
 @for $i from 1 through $item-number
 	.animation-name:nth-child(#{$i})
-		@include rotateInUpRight($duration: 1.0s, $delay: $i/4*1s, $iterations: 1)
+		@include rotateInUpRight($duration: 1.0s, $delay: $delay-timer * $i, $iterations: 1)
 		opacity: 1 !important
 		transition: opacity 0.5s ease
 

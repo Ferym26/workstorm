@@ -58,6 +58,9 @@ h6
 strong, b
 	font-family: $ff-bold
 
+// base - hover - active
++links(#333, #000, #000)
+
 a
 	text-decoration: underline
 	&:hover
@@ -65,4 +68,15 @@ a
 
 ul
 	list-style-type: none
+
+input,
+button,
+button:active,
+button:focus
+	border: none
+	outline: none !important
+button::-moz-focus-inner
+	border: 0 !important
+
+
 

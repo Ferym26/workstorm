@@ -2,45 +2,125 @@ extend /includes/layout.pug
 
 block content
 	//======== USER CONTENT ========
+	section
+		h2 Typography
+		h1 h1 - Lorem ipsum dolor sit amet, consectetur.
+		h2 h2 - Lorem ipsum dolor sit amet, consectetur.
+		h3 h3 - Lorem ipsum dolor sit amet, consectetur.
+		h4 h4 - Lorem ipsum dolor sit amet, consectetur.
+		h5 h5 - Lorem ipsum dolor sit amet, consectetur.
+		h6 h6 - Lorem ipsum dolor sit amet, consectetur.
 
-	h1 h1 - Lorem ipsum dolor sit amet, consectetur.
-	h2 h2 - Lorem ipsum dolor sit amet, consectetur.
-	h3 h3 - Lorem ipsum dolor sit amet, consectetur.
-	h4 h4 - Lorem ipsum dolor sit amet, consectetur.
-	h5 h5 - Lorem ipsum dolor sit amet, consectetur.
-	h6 h6 - Lorem ipsum dolor sit amet, consectetur.
+		p p - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit, nemo laudantium corrupti enim illum, animi, sit voluptatem harum quia nam tempore esse deserunt sed inventore dolor fugit repellendus adipisci.
 
-	p p - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit, nemo laudantium corrupti enim illum, animi, sit voluptatem harum quia nam tempore esse deserunt sed inventore dolor fugit repellendus adipisci.
-	b b - Lorem ipsum dolor sit amet, consectetur.
-	br
-	strong  strong - Lorem ipsum dolor sit amet, consectetur.
-	ul
-		li li - Lorem ipsum dolor sit amet.
-		li li - Lorem ipsum dolor sit amet.
-	a(href='#') Some LINK
-	br
-	i.fa.fa-thumbs-o-ups
-
-
-
-	form#form1
-		// Hidden Required Fields
-		input(type='hidden', name='project_name', value='Site Name')
-		input(type='hidden', name='admin_email', value='ferym_forever@list.ru')
-		input(type='hidden', name='form_subject', value='Form Subject')
-		// END Hidden Required Fields
-		input(type='text', name='Name', placeholder='You name...', required='')
+		b b - Lorem ipsum dolor sit amet, consectetur.
 		br
-		input(type='text', name='E-mail', placeholder='You E-mail...', required='')
-		br
-		input(type='text', name='Phone', placeholder='You phone...')
-		br
-		button Send
 
-	br
+		strong  strong - Lorem ipsum dolor sit amet, consectetur.
 
-	.some
-		h1 123123123123
+		ul
+			li li - Lorem ipsum dolor sit amet.
+			li li - Lorem ipsum dolor sit amet.
+
+		a(href='#') Some LINK
+		br
+
+		i.fa.fa-apple
+
+	section
+		h2 Forms
+		form#form1
+			// Hidden Required Fields
+			input(type='hidden', name='project_name', value='Site Name')
+			input(type='hidden', name='admin_email', value='ferym_forever@list.ru')
+			input(type='hidden', name='form_subject', value='Form Subject')
+			// END Hidden Required Fields
+			input(type='text', name='Name', placeholder='You name...', required='')
+			br
+			input(type='text', name='E-mail', placeholder='You E-mail...', required='')
+			br
+			input(type='text', name='Phone', placeholder='You phone...')
+			br
+			//label(class="label--checkbox" for="che1") 123
+			//	input(id="che1" type="checkbox")
+			input(id="radio-1" class="radio-custom" name="radio-group" type="radio" checked)
+			label(for="radio-1" class="radio-custom-label") First Choice
+			br
+			input(type="radio", name="radio")
+			input(type="radio", name="radio")
+			
+
+	section
+		h2 UI elements
+
+		ul.horiz-menu
+			li.active 
+				a.main-item(href="javascript:void(0);") Menu hover 1
+				ul.hover-menu
+					li
+						a(href="#") Лоботомия
+					li
+						a(href="#") Лоботомия
+					li
+						a(href="#") Лоботомия
+					li
+						a(href="#") Лоботомия
+					li
+						a(href="#") Лоботомия
+			li
+				a.main-item(href="javascript:void(0);") Menu click
+				ul.click-menu
+					li
+						a(href="#") Лоботомия 3
+					li
+						a(href="#") Лоботомия 3
+					li
+						a(href="#") Лоботомия 3
+					li
+						a(href="#") Лоботомия 3
+					li
+						a(href="#") Лоботомия 3
+			li
+				a.menuLink(href="#goAnchor") Menu anchor
+
+		.tabs
+			ul.tabs__caption
+				li.active 1-я вкладка
+				li 2-я вкладка
+			.tabs__content.active
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, earum.
+			.tabs__content
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis voluptas placeat natus unde quo? Odit ipsa provident cum iure accusantium, error, natus tenetur laborum, delectus animi dolorem ipsum fuga sint!
+
+		.owl-carousel
+			div
+				img(src='http://placehold.it/640x480', alt='slider')
+				
+			div
+				img(src='http://placehold.it/640x480', alt='slider')
+
+			div
+				img(src='http://placehold.it/640x480', alt='slider')
+
+			div
+				img(src='http://placehold.it/640x480', alt='slider')
+
+
+		button Я обычная кнопка
+
+		button#js_btnUp Я кнопка вверх
+
+	section
+		h2 Enother
+		.hover--item_1 Hover-1
+		.svg-mask
+			img(src="img/model-1.png", alt="model")
+
+			svg
+				defs
+					filter#myFilter3
+						fecolormatrix(in='a1', type='saturate', values='0')
+
 
 	//Container
 	.container
@@ -55,6 +135,15 @@ block content
 				p  Lorem ipsum dolor sit amet
 		//END row
 	//END Container
+
+	section#goAnchor
+		h2 Text
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
+
 
 
 	//======== END USER CONTENT ========

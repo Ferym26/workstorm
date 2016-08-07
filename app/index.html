@@ -34,31 +34,96 @@
     </header>
     <!--======== END HEADER ========-->
     <!--======== USER CONTENT ========-->
-    <h1>h1 - Lorem ipsum dolor sit amet, consectetur.</h1>
-    <h2>h2 - Lorem ipsum dolor sit amet, consectetur.</h2>
-    <h3>h3 - Lorem ipsum dolor sit amet, consectetur.</h3>
-    <h4>h4 - Lorem ipsum dolor sit amet, consectetur.</h4>
-    <h5>h5 - Lorem ipsum dolor sit amet, consectetur.</h5>
-    <h6>h6 - Lorem ipsum dolor sit amet, consectetur.</h6>
-    <p>p - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit, nemo laudantium corrupti enim illum, animi, sit voluptatem harum quia nam tempore esse deserunt sed inventore dolor fugit repellendus adipisci.</p><b>b - Lorem ipsum dolor sit amet, consectetur.</b><br><strong> strong - Lorem ipsum dolor sit amet, consectetur.</strong>
-    <ul>
-      <li>li - Lorem ipsum dolor sit amet.</li>
-      <li>li - Lorem ipsum dolor sit amet.</li>
-    </ul><a href="#">Some LINK</a><br><i class="fa fa-thumbs-o-ups"></i>
-    <form id="form1">
-      <!-- Hidden Required Fields-->
-      <input type="hidden" name="project_name" value="Site Name">
-      <input type="hidden" name="admin_email" value="ferym_forever@list.ru">
-      <input type="hidden" name="form_subject" value="Form Subject">
-      <!-- END Hidden Required Fields-->
-      <input type="text" name="Name" placeholder="You name..." required=""><br>
-      <input type="text" name="E-mail" placeholder="You E-mail..." required=""><br>
-      <input type="text" name="Phone" placeholder="You phone..."><br>
-      <button>Send</button>
-    </form><br>
-    <div class="some">
-      <h1>123123123123</h1>
-    </div>
+    <section>
+      <h2>Typography</h2>
+      <h1>h1 - Lorem ipsum dolor sit amet, consectetur.</h1>
+      <h2>h2 - Lorem ipsum dolor sit amet, consectetur.</h2>
+      <h3>h3 - Lorem ipsum dolor sit amet, consectetur.</h3>
+      <h4>h4 - Lorem ipsum dolor sit amet, consectetur.</h4>
+      <h5>h5 - Lorem ipsum dolor sit amet, consectetur.</h5>
+      <h6>h6 - Lorem ipsum dolor sit amet, consectetur.</h6>
+      <p>p - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit, nemo laudantium corrupti enim illum, animi, sit voluptatem harum quia nam tempore esse deserunt sed inventore dolor fugit repellendus adipisci.</p><b>b - Lorem ipsum dolor sit amet, consectetur.</b><br><strong> strong - Lorem ipsum dolor sit amet, consectetur.</strong>
+      <ul>
+        <li>li - Lorem ipsum dolor sit amet.</li>
+        <li>li - Lorem ipsum dolor sit amet.</li>
+      </ul><a href="#">Some LINK</a><br><i class="fa fa-apple"></i>
+    </section>
+    <section>
+      <h2>Forms</h2>
+      <form id="form1">
+        <!-- Hidden Required Fields-->
+        <input type="hidden" name="project_name" value="Site Name">
+        <input type="hidden" name="admin_email" value="ferym_forever@list.ru">
+        <input type="hidden" name="form_subject" value="Form Subject">
+        <!-- END Hidden Required Fields-->
+        <input type="text" name="Name" placeholder="You name..." required=""><br>
+        <input type="text" name="E-mail" placeholder="You E-mail..." required=""><br>
+        <input type="text" name="Phone" placeholder="You phone..."><br>
+        <!--label(class="label--checkbox" for="che1") 123-->
+        <!--	input(id="che1" type="checkbox")-->
+        <input class="radio-custom" id="radio-1" name="radio-group" type="radio" checked>
+        <label class="radio-custom-label" for="radio-1">First Choice</label><br>
+        <input type="radio" name="radio">
+        <input type="radio" name="radio">
+      </form>
+    </section>
+    <section>
+      <h2>UI elements</h2>
+      <ul class="horiz-menu">
+        <li class="active"> <a class="main-item" href="javascript:void(0);">Menu hover 1</a>
+          <ul class="hover-menu">
+            <li><a href="#">Лоботомия</a></li>
+            <li><a href="#">Лоботомия</a></li>
+            <li><a href="#">Лоботомия</a></li>
+            <li><a href="#">Лоботомия</a></li>
+            <li><a href="#">Лоботомия</a></li>
+          </ul>
+        </li>
+        <li><a class="main-item" href="javascript:void(0);">Menu click</a>
+          <ul class="click-menu">
+            <li><a href="#">Лоботомия 3</a></li>
+            <li><a href="#">Лоботомия 3</a></li>
+            <li><a href="#">Лоботомия 3</a></li>
+            <li><a href="#">Лоботомия 3</a></li>
+            <li><a href="#">Лоботомия 3</a></li>
+          </ul>
+        </li>
+        <li><a class="menuLink" href="#goAnchor">Menu anchor</a></li>
+      </ul>
+      <div class="tabs">
+        <ul class="tabs__caption">
+          <li class="active">1-я вкладка</li>
+          <li>2-я вкладка</li>
+        </ul>
+        <div class="tabs__content active">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, earum.</p>
+        </div>
+        <div class="tabs__content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis voluptas placeat natus unde quo? Odit ipsa provident cum iure accusantium, error, natus tenetur laborum, delectus animi dolorem ipsum fuga sint!</p>
+        </div>
+      </div>
+      <div class="owl-carousel">
+        <div><img src="http://placehold.it/640x480" alt="slider"></div>
+        <div><img src="http://placehold.it/640x480" alt="slider"></div>
+        <div><img src="http://placehold.it/640x480" alt="slider"></div>
+        <div><img src="http://placehold.it/640x480" alt="slider"></div>
+      </div>
+      <button>Я обычная кнопка</button>
+      <button id="js_btnUp">Я кнопка вверх</button>
+    </section>
+    <section>
+      <h2>Enother</h2>
+      <div class="hover--item_1">Hover-1</div>
+      <div class="svg-mask"><img src="img/model-1.png" alt="model">
+        <svg>
+          <defs>
+            <filter id="myFilter3">
+              <fecolormatrix in="a1" type="saturate" values="0"></fecolormatrix>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </section>
     <!--Container-->
     <div class="container">
       <div class="row">
@@ -78,6 +143,14 @@
       <!--END row-->
     </div>
     <!--END Container-->
+    <section id="goAnchor">
+      <h2>Text</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.</p>
+    </section>
     <!--======== END USER CONTENT ========-->
     <!--======== FOOTER ========-->
     <footer>
