@@ -185,6 +185,16 @@ $btn-size: 50px
 
 
 //SVG mask
+//About http://html5.by/blog/svg-filters/
 .svg-mask
-	img:hover
-		filter: url("#myFilter3")
+	height: 350px
+	position: relative
+	overflow hidden
+	background: url(/img/model-2.png) no-repeat 50% 50%
+	background-size: cover
+	img
+		
+	&:hover
+		//filter: url("#myFilter2")
+		filter: grayscale(100%)
+		transition: all 3s ease

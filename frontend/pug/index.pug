@@ -113,13 +113,19 @@ block content
 	section
 		h2 Enother
 		.hover--item_1 Hover-1
+
 		.svg-mask
-			img(src="img/model-1.png", alt="model")
+			//img(src="img/model-2.png", alt="model")
+
 
 			svg
 				defs
-					filter#myFilter3
+					//Сделать черно-белым
+					filter#myFilter1
 						fecolormatrix(in='a1', type='saturate', values='0')
+					//Блюр
+					filter#myFilter2
+						feGaussianBlur(stdDeviation="2")
 
 
 	//Container

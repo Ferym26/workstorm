@@ -32,7 +32,7 @@ var	gulp           = require('gulp'),
 
 
 
-gulp.task('serve', ['styles', 'vendors', 'pug'], function() {
+gulp.task('serve', ['styles', 'vendors', 'pug', 'imgmin'], function() {
 		browserSync.init({
 				server: {
 						baseDir: "./app"
@@ -119,9 +119,10 @@ gulp.task('watch', function () {
 		gulp.watch('app/libs/**/*.js', ['vendors']);
 		gulp.watch('bower_components/**/*.js', ['vendors']);
 
+		gulp.watch('frontend/img/**/*.{png,jpg,jpeg,svg}', ['imgmin']);
+
 		gulp.watch('app/js/*.js').on("change", browserSync.reload);
-		gulp.watch('app/*.html').on('change', browserSync.reload);
-		gulp.watch('frontend/img/*.{png,jpg,jpeg,svg}', ['imgmin']);
+		gulp.watch('app/*.html').on('change', browserSync.reload);		
 });
 
 

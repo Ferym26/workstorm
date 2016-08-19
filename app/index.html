@@ -6,10 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:image" content="path/to/image.jpg">
-  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
   <!-- Header CSS (First Sections of Website: paste after release from _header.min.css here)-->
   <style></style>
   <!-- Load CSS, CSS Localstorage & WebFonts Main Function-->
@@ -27,6 +23,10 @@
     <link rel="stylesheet" href="css/header.min.css">
     <link rel="stylesheet" href="css/main.min.css">
   </noscript>
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
   <body>
     <!--======== HEADER ========-->
     <header>
@@ -114,11 +114,17 @@
     <section>
       <h2>Enother</h2>
       <div class="hover--item_1">Hover-1</div>
-      <div class="svg-mask"><img src="img/model-1.png" alt="model">
+      <div class="svg-mask">
+        <!--img(src="img/model-2.png", alt="model")-->
         <svg>
           <defs>
-            <filter id="myFilter3">
+            <!--Сделать черно-белым-->
+            <filter id="myFilter1">
               <fecolormatrix in="a1" type="saturate" values="0"></fecolormatrix>
+            </filter>
+            <!--Блюр-->
+            <filter id="myFilter2">
+              <feGaussianBlur stdDeviation="2"></feGaussianBlur>
             </filter>
           </defs>
         </svg>
