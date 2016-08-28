@@ -1,0 +1,1 @@
+{"version":3,"sources":["header.sass"],"names":[],"mappings":"AAMA,OACC,WAAA","file":"header.min.css","sourcesContent":["@import \"bourbon\";\n@import \"_variables\";\n@import \"_mixins\";\n\n\n/*~~~~~~~~~~~~~~~ section HEADER ~~~~~~~~~~~~~~~*/\nheader {\n\ttext-align: center; }\n\n/*~~~~~~~~~~~~~~~ END section HEADER ~~~~~~~~~~~~~~~*/\n\n\n\n\n\n"],"sourceRoot":"/source/"}
