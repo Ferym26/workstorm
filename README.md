@@ -14,7 +14,7 @@ $ npm i -g bower (*)
 $ bower i
 $ npm i -g gulp (*)
 $ gulp
-открыть в браузере http://localhost:3003/
+открыть в браузере http://localhost:3000/
 (*) Для чистой системы
 ```
 

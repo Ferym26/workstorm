@@ -6,8 +6,8 @@ tmp
 .deploy
 /node_modules
 /bower_components
-/backup
+/backup/*
 /dist
-/specs
+/specs/*
 app/js/bower_components.js
 app/js/vendors.js

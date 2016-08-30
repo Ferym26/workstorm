@@ -65,7 +65,7 @@
       <ul>
         <li>li - Lorem ipsum dolor sit amet.</li>
         <li>li - Lorem ipsum dolor sit amet.</li>
-      </ul><a href="#">Some LINK</a><br><i class="fa fa-apple"></i>
+      </ul><a href="#">Some LINK</a><a href="javascript:void(0)"></a><br><i class="fa fa-apple"></i>
     </section>
     <section>
       <h2>Forms</h2>
@@ -77,14 +77,30 @@
         <!-- END Hidden Required Fields-->
         <input type="text" name="Name" placeholder="You name..." required=""><br>
         <input type="text" name="E-mail" placeholder="You E-mail..." required=""><br>
-        <input type="text" name="Phone" placeholder="You phone..."><br>
-        <!--label(class="label--checkbox" for="che1") 123-->
-        <!--	input(id="che1" type="checkbox")-->
-        <input class="radio-custom" id="radio-1" name="radio-group" type="radio" checked>
-        <label class="radio-custom-label" for="radio-1">First Choice</label><br>
-        <input type="radio" name="radio">
-        <input type="radio" name="radio">
+        <input type="text" name="Phone" placeholder="You phone...">
       </form>
+      <div class="inp-wrapper1">
+        <h3>Group 1</h3>
+        <input id="featured-1" type="radio" name="featured" checked="">
+        <label for="featured-1">this is the first radio button</label><br>
+        <input id="featured-2" type="radio" name="featured">
+        <label for="featured-2">the second			</label><br>
+        <input id="featured-4" type="checkbox" name="featured-cb" checked="">
+        <label for="featured-4">the first checkbox</label><br>
+        <input id="featured-5" type="checkbox" name="featured-cb">
+        <label for="featured-5">the second</label>
+      </div>
+      <div class="inp-wrapper2">
+        <h3>Group 2</h3>
+        <div class="select">
+          <select>
+            <option>First select</option>
+            <option>Option</option>
+            <option>Option</option>
+          </select>
+          <div class="select__arrow"></div>
+        </div>
+      </div>
     </section>
     <section>
       <h2>UI elements</h2>

@@ -51,7 +51,7 @@ gulp.task('serve', ['styles', 'vendors', 'pug'], function() {
 
 gulp.task('styles', function () {
 	gulp.src('frontend/sass/*.{scss,sass}')
-		.pipe(sourcemaps.init())
+		//.pipe(sourcemaps.init())
 		.pipe(sass({includePaths: require('node-bourbon').includePaths}))
 		.on('error', notify.onError({
 			title: 'SASS error'
@@ -59,7 +59,7 @@ gulp.task('styles', function () {
 		.pipe(rename({suffix: '.min', prefix : ''}))
 		.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
 		.pipe(cleanCSS())
-		.pipe(sourcemaps.write('.'))
+		//.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.stream());
 });
@@ -126,6 +126,7 @@ gulp.task('watch', function () {
 });
 
 
+
 /*
 gulp.task('buildhtml', function() {
   gulp.src(['app/*.html'])
@@ -136,6 +137,7 @@ gulp.task('buildhtml', function() {
     .pipe(gulp.dest('dist/'));
 });
 */
+
 
 
 gulp.task('removedist', function() {

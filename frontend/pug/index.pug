@@ -23,6 +23,7 @@ block content
 			li li - Lorem ipsum dolor sit amet.
 
 		a(href='#') Some LINK
+		a(href="javascript:void(0)")
 		br
 
 		i.fa.fa-apple
@@ -40,15 +41,31 @@ block content
 			input(type='text', name='E-mail', placeholder='You E-mail...', required='')
 			br
 			input(type='text', name='Phone', placeholder='You phone...')
-			br
-			//label(class="label--checkbox" for="che1") 123
-			//	input(id="che1" type="checkbox")
-			input(id="radio-1" class="radio-custom" name="radio-group" type="radio" checked)
-			label(for="radio-1" class="radio-custom-label") First Choice
-			br
-			input(type="radio", name="radio")
-			input(type="radio", name="radio")
 			
+		.inp-wrapper1
+			h3 Group 1
+			input#featured-1(type='radio', name='featured', checked='')
+			label(for='featured-1') this is the first radio button
+			br
+			input#featured-2(type='radio', name='featured')
+			label(for='featured-2') the second			
+			br
+			input#featured-4(type='checkbox', name='featured-cb', checked='')
+			label(for='featured-4') the first checkbox
+			br
+			input#featured-5(type='checkbox', name='featured-cb')
+			label(for='featured-5') the second
+
+		.inp-wrapper2
+			h3 Group 2
+			.select
+				select
+					option First select
+					option Option
+					option Option
+				.select__arrow
+
+
 
 	section
 		h2 UI elements
