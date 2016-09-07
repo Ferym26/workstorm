@@ -35,7 +35,7 @@ var	gulp           = require('gulp'),
 
 
 
-gulp.task('serve', ['styles', 'vendors', 'pug'], function() {
+gulp.task('serve', ['styles', 'vendors', 'pug', 'add-dist'], function() {
 		browserSync.init({
 				server: {
 					baseDir: "./app"
@@ -142,6 +142,14 @@ gulp.task('buildhtml', function() {
 
 gulp.task('removedist', function() {
 	return del.sync('dist');
+});
+
+
+
+gulp.task("add-dist", function() {
+	gulp.src([' '])
+		.pipe(gulp.dest('specs'))
+		.pipe(gulp.dest('backup'))
 });
 
 
