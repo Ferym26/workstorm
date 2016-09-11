@@ -1,172 +1,75 @@
-extend /includes/layout.pug
+doctype html
+html.no-js(lang='ru')
+	meta(charset='utf-8')
+	
+	title WorkStorm 1.4
+	
+	meta(name='description', content='')
 
-block content
-	//~~~~~~~~~~~~~~~ section CONTENT ~~~~~~~~~~~~~~~
-	section
-		h2 Typography
-		h1 h1 - Lorem ipsum dolor sit amet, consectetur.
-		h2 h2 - Lorem ipsum dolor sit amet, consectetur.
-		h3 h3 - Lorem ipsum dolor sit amet, consectetur.
-		h4 h4 - Lorem ipsum dolor sit amet, consectetur.
-		h5 h5 - Lorem ipsum dolor sit amet, consectetur.
-		h6 h6 - Lorem ipsum dolor sit amet, consectetur.
+	meta(http-equiv='X-UA-Compatible', content='IE=edge')
+	meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+	meta(property='og:image', content='path/to/image.jpg')
+	
+	// Header CSS (First Sections of Website: paste after release from _header.min.css here)
+	style.
+	
+	// Load CSS, CSS Localstorage & WebFonts Main Function
+	script.
+		!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)};function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n};function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);
+	
+	// Load CSS Start
+	script.
+		// Выбрать один вариант
+		// Загрузка шрифтов, если сайт в корне
+		//loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );
 
-		p p - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis suscipit, nemo laudantium corrupti enim illum, animi, sit voluptatem harum quia nam tempore esse deserunt sed inventore dolor fugit repellendus adipisci.
+		// Загрузка шрифтов, если сайт в папке
+		loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" );
+		
+	script.
+		loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );
+	script.
+		loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );
+	// Load CSS End
+	
+	// Load CSS Compilled without JS
+	noscript
+		link(rel='stylesheet', href='css/header.min.css')
+		link(rel='stylesheet', href='css/main.min.css')
 
-		b b - Lorem ipsum dolor sit amet, consectetur.
-		br
+	link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+	link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+	link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+	link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
 
-		strong  strong - Lorem ipsum dolor sit amet, consectetur.
+	// Кастомные цвета панелей Start. HEX
+	// Chrome, Firefox OS and Opera
+	meta(name='theme-color', content='#000')
+	// Windows Phone
+	meta(name='msapplication-navbutton-color', content='#000')
+	// iOS Safari
+	meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+	
+	body
+		
+		include ../blocks/header/header.pug
 
-		ul
-			li li - Lorem ipsum dolor sit amet.
-			li li - Lorem ipsum dolor sit amet.
+		include ../blocks/content/content.pug
 
-		a(href='#') Some LINK
-		a(href="javascript:void(0)")
-		br
+		include ../blocks/footer/footer.pug
 
-		i.fa.fa-apple
+		.hidden
 
-	section
-		h2 Forms
-		form#form1
-			// Hidden Required Fields
-			input(type='hidden', name='project_name', value='Site Name')
-			input(type='hidden', name='admin_email', value='ferym_forever@list.ru')
-			input(type='hidden', name='form_subject', value='Form Subject')
-			// END Hidden Required Fields
-			input(type='text', name='Name', placeholder='You name...', required='')
-			br
-			input(type='text', name='E-mail', placeholder='You E-mail...', required='')
-			br
-			input(type='text', name='Phone', placeholder='You phone...')
-			
-		.inp-wrapper1
-			h3 Group 1
-			input#featured-1(type='radio', name='featured', checked='')
-			label(for='featured-1') this is the first radio button
-			br
-			input#featured-2(type='radio', name='featured')
-			label(for='featured-2') the second			
-			br
-			input#featured-4(type='checkbox', name='featured-cb', checked='')
-			label(for='featured-4') the first checkbox
-			br
-			input#featured-5(type='checkbox', name='featured-cb')
-			label(for='featured-5') the second
-
-		.inp-wrapper2
-			h3 Group 2
-			.select
-				select
-					option First select
-					option Option
-					option Option
-				.select__arrow
-
-
-
-	section
-		h2 UI elements
-
-		ul.horiz-menu
-			li.active 
-				a.main-item(href="javascript:void(0);") Menu hover 1
-				ul.hover-menu
-					li
-						a(href="#") Лоботомия
-					li
-						a(href="#") Лоботомия
-					li
-						a(href="#") Лоботомия
-					li
-						a(href="#") Лоботомия
-					li
-						a(href="#") Лоботомия
-			li
-				a.main-item(href="javascript:void(0);") Menu click
-				ul.click-menu
-					li
-						a(href="#") Лоботомия 3
-					li
-						a(href="#") Лоботомия 3
-					li
-						a(href="#") Лоботомия 3
-					li
-						a(href="#") Лоботомия 3
-					li
-						a(href="#") Лоботомия 3
-			li
-				a.menuLink(href="#goAnchor") Menu anchor
-
-		.tabs
-			ul.tabs__caption
-				li.active 1-я вкладка
-				li 2-я вкладка
-			.tabs__content.active
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, earum.
-			.tabs__content
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis voluptas placeat natus unde quo? Odit ipsa provident cum iure accusantium, error, natus tenetur laborum, delectus animi dolorem ipsum fuga sint!
-
-		.owl-carousel
-			div
-				img(src='http://placehold.it/640x480', alt='slider')
+		//if lt IE 9
+			script(src='libs/es5-shim/es5-shim.min.js')
+			script(src='libs/html5shiv/dist/html5shiv.min.js')
+			script(src='libs/html5shiv/dist/html5shiv-printshiv.min.js')
+			script(src='libs/respond/dest/respond.min.js')
 				
-			div
-				img(src='http://placehold.it/640x480', alt='slider')
-
-			div
-				img(src='http://placehold.it/640x480', alt='slider')
-
-			div
-				img(src='http://placehold.it/640x480', alt='slider')
-
-
-		button Я обычная кнопка
-
-		button#js_btnUp Я кнопка вверх
-
-	section
-		h2 Enother
-		.hover--item_1 Hover-1
-
-		.svg-mask
-			//img(src="img/model-2.png", alt="model")
-
-
-			svg
-				defs
-					//Сделать черно-белым
-					filter#myFilter1
-						fecolormatrix(in='a1', type='saturate', values='0')
-					//Блюр
-					filter#myFilter2
-						feGaussianBlur(stdDeviation="2")
-
-
-	//Container
-	.container
-		.row
-			.col-md-3.item
-				p  Lorem ipsum dolor sit amet
-			.col-md-3.item
-				p  Lorem ipsum dolor sit amet
-			.col-md-3.item
-				p  Lorem ipsum dolor sit amet
-			.col-md-3.item
-				p  Lorem ipsum dolor sit amet
-		//END row
-	//END Container
-
-	section#goAnchor
-		h2 Text
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident illum, non, amet reprehenderit, atque magnam et error similique facere aut cumque quia facilis iure sit saepe, consectetur nemo dolorem quo.
-
-
-
-	//~~~~~~~~~~~~~~~ END section CONTENT ~~~~~~~~~~~~~~~
+		// Load Scripts Start
+		script.
+			var scr = {"scripts":[
+			{"src" : "js/vendors.js", "async" : false},
+			{"src" : "js/common.js", "async" : false}
+			]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+		// Load Scripts End

@@ -2,21 +2,26 @@
 
 
 //For restyling bootstrap
-//@import "_restylebootstrap"
+@import "_restylebootstrap"
 
 
-//bower_components styles
-@import "bower_components/bootstrap/scss/bootstrap.scss"
+//bower_components styles 
+//@import "bower_components/bootstrap/scss/bootstrap.scss"
 @import "bower_components/font-awesome/scss/font-awesome.scss"
 @import "bower_components/owl.carousel/src/scss/owl.carousel.scss"
 
+
+@import "_variables"
+@import "_mixins"
 
 //PROGECT THEME
 @import "_theme"
 
 
-//ANOTHER PAGES
-@import "pages/_page1"
+//BEM BLOCKS
+@import "../blocks/header/header"
+@import "../blocks/content/content"
+@import "../blocks/footer/footer"
 
 
 //ALWAYS END

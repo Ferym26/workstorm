@@ -58,7 +58,7 @@ gulp.task('styles', function () {
 		}))
 		.pipe(rename({suffix: '.min', prefix : ''}))
 		.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
-		.pipe(cleanCSS())
+		//.pipe(cleanCSS())
 		//.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.stream());
@@ -67,7 +67,7 @@ gulp.task('styles', function () {
 
 
 gulp.task('pug', function build() {
-	gulp.src('frontend/pug/*.pug')
+	gulp.src('frontend/pug/**/*.pug')
 		.pipe(plumber())
 		.pipe(pug({pretty: true, basedir: __dirname + '/frontend/pug'}))
 		.on('error', notify.onError({
@@ -115,8 +115,8 @@ gulp.task('vendors', ['bower'], function () {
 
 
 gulp.task('watch', function () {
-	gulp.watch('frontend/sass/**/*.{scss,sass}', ['styles']);
-	gulp.watch('frontend/pug/**/*.pug', ['pug']);
+	gulp.watch(['frontend/sass/**/*.{scss,sass}', 'frontend/blocks/**/*.{scss,sass}'], ['styles']);
+	gulp.watch('frontend/**/*.pug', ['pug']);
 
 	gulp.watch('app/libs/**/*.js', ['vendors']);
 	gulp.watch('bower_components/**/*.js', ['vendors']);	

@@ -124,5 +124,6 @@ $(document).ready(function() {
 
 	};
 
+	console.log("All fine, Dude!");
 
 });
