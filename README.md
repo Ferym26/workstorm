@@ -3,7 +3,7 @@
 
 ### Подготовка к запуску:
  - Установить [NodeJs](https://nodejs.org)
- - Установить [Git](https://git-scm.com/). [Гайд №1](https://www.youtube.com/playlist?list=PLY4rE9dstrJyTdVJpv7FibSaXB4BHPInb), [Гайд №2](https://www.youtube.com/playlist?list=PLoonZ8wII66iUm84o7nadL-oqINzBLk5g)
+ - Установить [Git](https://conemu.github.io/). [Гайд №1](https://www.youtube.com/playlist?list=PLY4rE9dstrJyTdVJpv7FibSaXB4BHPInb), [Гайд №2](https://www.youtube.com/playlist?list=PLoonZ8wII66iUm84o7nadL-oqINzBLk5g)
  - Устноваить и настроить [ConEmu](http://www.conemu.ru) (желательно), [гайд](https://www.youtube.com/watch?v=x0hw8llIZkY) по настройке. (удобный терминал для пользователей Windows)
  
 
@@ -59,4 +59,4 @@ $ gulp
 
 ### Version 1.2
  - Изменен процесс сборки bower_components
- - Брейкпоинт при медиазапросах 480 -> 544, 320 -> 360
+ - Брейкпоинт при медиазапросах 480 -> 544, 320 -> 360 
