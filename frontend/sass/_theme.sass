@@ -1,9 +1,29 @@
 @import "bourbon"
-@import "_variables"
-@import "_mixins"
-
 
 /*~~~~~~~~~~~~~~~ base elements styles ~~~~~~~~~~~~~~~*/
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
 
 html
 	font-size: 100% /* % for rem; USE rem only for titles and huge texts*/
@@ -22,13 +42,12 @@ html
 	//	19px	118.75%
 	//	20px	125.00%
 
-
 body
 	min-width: 320px
 	position: relative
-	font-size: 100%
+	//font-size: 100%
 	line-height: 1.5
-	font-family: "RobotoRegular", sans-serif
+	font-family: $ff-regular
 	overflow-x: hidden
 	color: #000
 
@@ -36,7 +55,7 @@ body
 	display: none
 
 h1, h2, h3, h4, h5, h6, p, ul, li
-	font-weight: normal
+	font-weight: inherit
 	line-height: inherit
 	padding: 0
 	margin: 0
@@ -56,7 +75,10 @@ h6
 
 
 strong, b
-	font-family: "RobotoBold", sans-serif
+	font-family: $ff-bold
+
+// base - hover - active
++links(#333, #000, #000)
 
 a
 	text-decoration: underline
@@ -65,4 +87,15 @@ a
 
 ul
 	list-style-type: none
+
+input,
+button,
+button:active,
+button:focus
+	border: none
+	outline: none !important
+button::-moz-focus-inner
+	border: 0 !important
+
+
 

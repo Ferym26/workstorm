@@ -1,10 +1,6 @@
 @import "bourbon"
 @import "bower_components/another-dry-animate/scss/_another-dry-animate.scss"
 
-// Your animations hear
-// @include %animation name%(длительность, задержка, кол-во повторений)
-
-
 //	bounce 				bounceIn 					fadeIn 						fadeOut 					rotateIn
 //	flash	  			bounceInDown 			fadeInDown 				fadeOutDown 			rotateInDownLeft
 //	pulse 				bounceInLeft 			fadeInDownBig 		fadeOutDownBig 		rotateInDownRight
@@ -27,10 +23,23 @@
 //	rollIn						zoomOutLeft 		slideOutUp
 //	rollOut 					zoomOutRight 		
 //										zoomOutUp 			
-			
+
+/*~~~~~~~~~~~~~~~ ANIMATIONS ~~~~~~~~~~~~~~~*/
+//For multiple items
+$item-number:				4
+$delay-timer:				0.2s
+
+@for $i from 1 through $item-number
+	.animation-name:nth-child(#{$i})
+		@include rotateInUpRight($duration: 1.0s, $delay: $delay-timer * $i, $iterations: 1)
+		opacity: 1 !important
+		transition: opacity 0.5s ease
 
 
-.anim-title3
-	@include zoomIn($duration: 2s, $delay: 0s, $iterations: 1)
+//For single item
+.anim-item
+	@include rotateInUpRight($duration: 2s, $delay: 0s, $iterations: 1)
 	opacity: 1 !important
 	transition: opacity 1s ease
+
+/*~~~~~~~~~~~~~~~ End ANIMATIONS ~~~~~~~~~~~~~~~*/

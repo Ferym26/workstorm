@@ -1,72 +1,30 @@
-/*==========  Desktop First Method  ==========*/
+/*~~~~~~~~~~~~~~~ Desctop First Method ~~~~~~~~~~~~~~~*/
+@media only screen and (max-width : 1199px)
+	@import "media/_media1-max1199"
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	@import "media/_media1-max1200"
+@media only screen and (max-width : 991px)
+	@import "media/_media2-max991"
 
+@media only screen and (max-width : 767px)
+	@import "media/_media3-max767"
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	@import "media/_media2-max992"
-
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	/*Disable Animation on Mobile Devices*/
-	.animated
-		/*CSS transitions*/
-		-o-transition-property: none !important
-		-moz-transition-property: none !important
-		-ms-transition-property: none !important
-		-webkit-transition-property: none !important
-		transition-property: none !important
-		/*CSS transforms*/
-		-o-transform: none !important
-		-moz-transform: none !important
-		-ms-transform: none !important
-		-webkit-transform: none !important
-		transform: none !important
-		/*CSS animations*/
-		-webkit-animation: none !important
-		-moz-animation: none !important
-		-o-animation: none !important
-		-ms-animation: none !important
-		animation: none !important
-	@import "media/_media3-max768"
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 544px)
-	@import "media/_media4-max544"
+@media only screen and (max-width : 575px)
+	@import "media/_media4-max575"
 
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 360px)
-	@import "media/_media5-max360"
+/*~~~~~~~~~~~~~~~ Mobile First Method ~~~~~~~~~~~~~~~*/
+@media only screen and (min-width : 320px)
+	@import "media/_media1-min320"
 
+@media only screen and (min-width : 576px)
+	@import "media/_media2-min576"
 
-/*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 360px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 544px)
-	/**/
-
-
-/* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	/**/
+	@import "media/_media3-min768"
 
-
-/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	/**/
+	@import "media/_media4-min992"
 
-
-/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+	@import "media/_media5-min1200"
 

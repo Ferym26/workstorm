@@ -1,3 +1,5 @@
+/*~~~~~~~~~~~~~~~ MIXINS ~~~~~~~~~~~~~~~*/
+
 //vertical center
 =vcenter
 	position: absolute
@@ -16,24 +18,6 @@
 	position: absolute	
 	top: 50%
 	transform: translate(0, -50%)
-
-
-
-
-//centered item. outer>innet. $ta - text-align: ...
-=outer($height, $ta)
-	height: $height
-	text-align: $ta
-	&:before
-		content: ''
-		display: inline-block
-		height: 100%
-		vertical-align: middle
-=inner
-	display: inline-block
-	vertical-align: middle
-
-
 
 //triangle
 =arr($width, $height, $bg, $direction)
@@ -73,11 +57,11 @@
 	a
 		color: $link
 		&:hover
-			color: $hover
+			color: $hover !important
 		&:active
-			color: $active		
-		//&:visited
-			//color: $visit
+			color: $active !important
+		&:visited
+			color: $link !important
 	
 
 
@@ -95,35 +79,4 @@
 	background-size: cover
 	background-position: 50% 50%
 
-
-
-//Расставляет равномерно по ширине все дочерние элементы. Применяется к родителю.
-//Дочерним добаить свойства dib и w
-=justify
-	text-align: justify
-	line-height: 0
-	font-size: 0
-	text-justify: newspaper
-	zoom: 1
-	text-align-last: justify
-	&:after
-		content: ""
-		display: inline-block
-		width: 100%
-		height: 0px
-		visibility: hidden
-		overflow: hidden
-
-
-
-//Выравнивает дочерний вертикально по центру родительского
-//Дочерним добавить свойство dib и vam
-=vertical
-	text-align: center
-	font-size: 0
-	&:before
-		content: ""
-		display: inline-block
-		vertical-align: middle
-		width: 0
-		height: 100%
+/*~~~~~~~~~~~~~~~ End MIXINS ~~~~~~~~~~~~~~~*/

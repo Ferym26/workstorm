@@ -24,8 +24,7 @@
     "respond": "^1.4.2",
     "es5-shim": "^4.5.8",
     "font-awesome": "^4.5.0",
-    "modernizer": "^2.8.2",
-    "waypoints": "^4.0.0",
+    "modernizer": "^2.8.2",    
     "owl.carousel": "owl-carousel2#^2.0.0-beta.3",
     "another-dry-animate": "*"
   }

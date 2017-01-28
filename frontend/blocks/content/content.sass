@@ -1,0 +1,315 @@
+@import "bourbon"
+
+/*~~~~~~~~~~~~~~~ section CONTENT-ADDSERVIC ~~~~~~~~~~~~~~~*/
+
+section
+	padding: 30px
+	margin: 30px
+	border-bottom: 3px solid lightgreen
+	h2:first-child
+		color: red
+
+/*~~~~~~~~~~~~~~~ END section CONTENT-ADDSERVIC ~~~~~~~~~~~~~~~*/
+
+
+.horiz-menu
+	display: flex	
+	justify-content: center
+	& > li		
+		position: relative
+		margin: 0 10px
+		background: #12fd45
+		& > a
+			display: block
+			padding: 15px 30px
+			color: #fff
+			text-decoration: none
+			white-space: nowrap //без переноса слов
+			&:after
+				content: ''
+				display: inline-block
+				margin-left: 10px
+				vertical-align: middle
+				+arr (10, 10, red, b)
+			
+		
+	//Меню при наведении
+	.hover-menu
+		display: none
+		position: absolute
+		top: 53px
+		left: 0
+		z-index: 99		
+		li
+			background: lightblue
+			a
+				display: block
+				padding: 15px 30px
+				color: #fff
+				text-decoration: none
+				white-space: nowrap //без переноса слов
+	.main-item:hover ~ .hover-menu,
+	.hover-menu:hover
+		display: block
+
+	//Меню при клике
+	.click-menu
+		display: none
+		position: absolute
+		top: 53px
+		left: 0
+		z-index: 99
+		li
+			background: pink
+			a
+				display: block
+				padding: 15px 30px
+				color: #fff
+				text-decoration: none
+				white-space: nowrap //без переноса слов
+	.main-item:focus ~ .click-menu,
+	.main-item:active ~ .click-menu,
+	.click-menu:hover
+		display: block
+
+
+
+//Hover effects
+.hover--item_1
+	position: relative
+	+size (120px 60px)
+	background: #ccc
+	overflow: hidden
+	cursor: pointer
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 5px
+		bottom: 0
+		right: 100%
+		background: #000
+		transition: right 0.2s ease-in-out
+	&:hover:after
+		right: 0
+
+
+
+
+//Tabs
+.tabs	
+	background: #EFEFEF
+	margin: 30px 0
+.tabs__caption
+	height: 28px
+	line-height: 25px
+	list-style: none
+	border-bottom: 1px solid #DDD
+	background: #FFF
+	li
+		display: inline-block
+		margin: 0 -5px -1px 0
+		padding: 0 13px 1px
+		color: #777
+		cursor: pointer
+		background: #F9F9F9
+		border: 1px solid #E4E4E4
+		border-bottom: 1px solid #F9F9F9
+		position: relative
+		&:hover
+			color: #F70
+			padding: 0 13px
+			background: #FFFFDF
+			border: 1px solid #FFCA95
+.tabs__caption .active
+	color: #444
+	background: #EFEFEF
+	padding: 0 13px 2px
+	border: 1px solid #D4D4D4
+	border-bottom: 1px solid #EFEFEF
+
+.tabs__content
+	display: none
+	border: 1px solid #D4D4D4
+	border-width: 0 1px 1px
+	background: #EFEFEF
+	padding: 0 12px
+	&.active
+		display: block
+
+
+//Slider
+$btn-size: 50px
+
+.owl-carousel	
+	position: relative
+	margin: 30px 0
+	.owl-stage-outer
+		@include border-bottom-radius($btn-size / 2)	
+	.owl-nav > div		
+		position: absolute
+		@include size($btn-size)
+		bottom: 0
+		background: red
+		border-radius: 50%
+		&:after
+			font-family: "FontAwesome"
+			display: block
+			@include size($btn-size)
+			text-align: center
+			line-height: $btn-size
+			font-size: 35px
+			color: #fff
+			transition: font-size .3s ease
+			border-radius: 50%
+			box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3)
+		&:hover:after
+			font-size: 45px
+	.owl-nav
+		.owl-prev
+			left: 0
+			&:after
+				content: '\f060'
+		.owl-next
+			right: 0
+			&:after
+				content: '\f061'
+	.owl-dots		
+		position: absolute
+		top: 0
+		.owl-dot
+			display: inline-block
+			+size (10px)
+			background: #000
+			margin: 5px
+
+
+//SVG mask
+//About http://html5.by/blog/svg-filters/
+.svg-mask
+	height: 350px
+	position: relative
+	overflow hidden
+	background: url(/img/model-2.png) no-repeat 50% 50%
+	background-size: cover
+	img
+		
+	&:hover
+		//filter: url("#myFilter2")
+		filter: grayscale(100%)
+		transition: all 3s ease
+
+
+
+
+// Стилизованные чекбоксы и радио
+// Group 1
+$element-size:			24px
+$element-bg:				#333
+$element-color:			red
+$element-hover:			#fff
+
+.inp-wrapper1
+	margin-top: 50px
+	input
+		&[type="radio"],
+		&[type="checkbox"]
+			display: none
+		&[type="radio"] + label,
+		&[type="checkbox"] + label
+			position: relative
+			display: inline-block
+			padding-left: 35px
+			cursor: pointer
+			line-height: $element-size	
+			transition: all 0.3s ease-in-out
+		&[type="radio"] + label:before,
+		&[type="checkbox"] + label:before,
+		&[type="radio"] + label:after,
+		&[type="checkbox"] + label:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			+size ($element-size)
+			text-align: center
+			color: $element-bg		
+			border-radius: 50%		
+			transition: all .3s ease
+		&[type="radio"]
+			+ label
+				&:before				
+					transition: all .3s ease
+					box-shadow: inset 0 0 0 6px $element-bg, inset 0 0 0 $element-size $element-bg
+				&:hover:before
+					transition: all .3s ease
+					box-shadow: inset 0 0 0 6px $element-bg, inset 0 0 0 $element-size $element-hover
+			&:checked + label:before
+				transition: all .3s ease
+				box-shadow: inset 0 0 0 6px $element-bg, inset 0 0 0 $element-size $element-color
+		&[type="checkbox"]
+			+ label
+				&:before
+					// ✓ ✗ 
+					content: '✗'
+					font-size: 24px
+					border-radius: 4px
+					background-color: $element-bg
+					color: $element-bg
+				&:hover:before
+					color: $element-hover
+			&:checked + label:before
+				background-color: $element-bg
+				color: $element-color
+
+//Group 2
+.inp-wrapper2
+	margin-top: 50px	
+
+
+	.select
+		position: relative
+		display: inline-block
+		margin-bottom: 15px
+		width: 200px
+		select
+			display: inline-block
+			width: 100%
+			cursor: pointer
+			padding: 10px 15px
+			outline: 0
+			border: 0
+			border-radius: 0
+			background: #e6e6e6
+			color: #7b7b7b
+			appearance: none
+			&::-ms-expand
+				display: none
+			&:hover, &:focus
+				color: #000
+				background: #ccc
+			&:disabled
+				opacity: 0.5
+				pointer-events: none
+
+	.select__arrow
+		position: absolute
+		top: 16px
+		right: 15px
+		width: 0
+		height: 0
+		pointer-events: none
+		border-style: solid
+		border-width: 8px 5px 0 5px
+		border-color: #7b7b7b transparent transparent transparent
+
+	.select select
+		&:hover ~ .select__arrow, &:focus ~ .select__arrow
+			border-top-color: #000
+		&:disabled ~ .select__arrow
+			border-top-color: #ccc
+
+
+
+	
